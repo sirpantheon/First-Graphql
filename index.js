@@ -1,40 +1,9 @@
-const { ApolloServer, gql } = require("apollo-server");
-
-
-//Schema
-const typeDefs = gql`
-  type Projeto {
-    titulo: String
-    tecnologia: String
-  }
-
-  type Query {
-    obterClientes: [Projeto]
-  }
-`;
-const Projetos = [
-  {
-    titulo: "Curso de Nextjs",
-    tecnologia: "Nextjs",
-  },
-  {
-    titulo: "Curso de javascript",
-    tecnologia: "javascript",
-  },
-  {
-    titulo: "Curso de Typescript",
-    tecnologia: "Typescript",
-  },
-];
-//Resolver
-const resolvers = {
-  Query: {
-    obterClientes: () => Projetos
-  },
-};
+const { ApolloServer } = require("apollo-server");
+const typeDefs = require('./db/schema')
+const resolvers = require('./db/resolvers')
 
 //server
-const server = new ApolloServer({typeDefs, resolvers});
+const server = new ApolloServer({ typeDefs, resolvers });
 
 //iniciar servidor
 server.listen().then(({ url }) => {
