@@ -1,0 +1,16 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "projeto de graphql",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "author": "johnatan paixao",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.11.1",
+    "nodemon": "^2.0.20"
+  }
+}
