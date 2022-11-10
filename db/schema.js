@@ -12,7 +12,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    obterProjeto(input: projetoInput!): [Projeto]
+    obterProjeto(input: projetoInput): [Projeto]
     obterTecnologia: [Tecnologia]
   }
 `;
