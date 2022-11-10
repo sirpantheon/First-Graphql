@@ -7,9 +7,12 @@ const typeDefs = gql`
   type Tecnologia {
     tecnologia: String
   }
+  input projetoInput{
+    tecnologia: String
+  }
 
   type Query {
-    obterProjeto: [Projeto]
+    obterProjeto(input: projetoInput!): [Projeto]
     obterTecnologia: [Tecnologia]
   }
 `;
