@@ -2,12 +2,15 @@
 //Resolver
 const resolvers = {
   Query: {
-    obterProjeto: (_, { input }, ctx) => {
-      const resultado = Projetos.filter( Projetos => Projetos.tecnologia === input.tecnologia)
-
-      return resultado
+    obterProjeto: ()=>"2322"
+    },  
+    Mutation:{
+      novoUsuario:(_, input)=> {
+        console.log(input);
+        return "criando...";
+      }
     }
-  },
-};
+  };
+
 
 module.exports = resolvers;
