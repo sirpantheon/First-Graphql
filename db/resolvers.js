@@ -1,4 +1,5 @@
 const Usuario = require("../models/Usuario")
+const bcryptjs = require("bcryptjs")
 //Resolver
 const resolvers = {
   Query: {
@@ -6,6 +7,8 @@ const resolvers = {
   },
   Mutation: {
     novoUsuario: async (_, input) => {
+      // console.log(input)
+      // return "criando.."
       const { email, password } = input;
       //Verificar Usuario
       const usuarioExistente = await Usuario.findOne({email});
@@ -13,6 +16,8 @@ const resolvers = {
         throw new Error ('Usuario já existe')
       } 
       //password
+      const salt = await bcryptjs.genSalt(10);
+      input.password = await bcryptjs.hash(password, salt)
 
       try{
         //Salvar no DB
