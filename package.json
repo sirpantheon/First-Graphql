@@ -10,6 +10,7 @@
   "author": "johnatan paixao",
   "license": "ISC",
   "dependencies": {
+    "@apollo/sandbox": "^1.0.2",
     "apollo-server": "^3.11.1",
     "dotenv": "^16.0.3",
     "mongoose": "^6.7.2",

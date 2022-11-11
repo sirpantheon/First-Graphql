@@ -8,7 +8,7 @@ const typeDefs = gql`
     apelido: String
     email: String
     criador: String
-  }
+  } 
 
   input UsuarioInput {
     nome: String!  
@@ -22,7 +22,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    novoUsuario(input: UsuarioInput): String
+    novoUsuario(input: UsuarioInput): Usuario
   }
 `;
 
