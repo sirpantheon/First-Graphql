@@ -4,23 +4,23 @@ const UsuarioSchema = mongoose.Schema({
     nome: {
         type: String,
         required: true,
-        trim: true,
+        trim: true
     },
     apelido: {
         type: String,
         required: true,
-        trim: true,
+        trim: true
     },
     email: {
         type: String,
         required: true,
         trim: true,
-        unique: true,
+        unique: true
     },
     password: {
         type: String,
         required: true,
-        trim: true,
+        trim: true
     }, 
     criador: {
         type: Date,
@@ -28,4 +28,4 @@ const UsuarioSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Usuario', UsuarioSchema);
+module.exports = mongoose.model('usuario', UsuarioSchema);
